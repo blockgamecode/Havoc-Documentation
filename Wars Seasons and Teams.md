@@ -1,27 +1,77 @@
-﻿# Wars  & Seasons
+## Note
+
+A note on some of the lingo that might be used in this document:
+
+Storage-Key: All servers have their storage key, which may or may not differentiate them from other servers (More than one server can share the same storage key)
+
+## Wars
   
 Wars allow teams to fight for control of locations.  
-  
-  
+
 ## Setting Up War Locations  
   
 In order to create a new war location, you must do the following:  
   
 Go to the center of the location you want to create the war at, then do  
-**/war newmap**  
+**/war newmap**.
+To edit a current exist location, use **/war editloc <locid>**.
   
 To add a holdable location, do **/war addholdable <radius\>**. *Undo this with **/war undo-last-holdable***  
   
 To add a player spawn point, do **/war addspawn**. *Undo this with **/war cancel-last-spawn***  
+Set the map's name with **/war setlocname <name\>**  
   
-Set the map's name with **/war set-map-name <name\>**  
+To finish creating the location and add it to the list: **/war finish**
   
 ### Some other useful location commands:  
   
 **/war view-locations** - View the current war locations (gives option to delete them)  
 **/war delete-location <id\>** - Delete the specified war location  
 
-## Creating Seasons and Wars
+## War administrative commands
+
+To set the next war date: **/war setwardate <date (Format: 1970-01-01 00:00:00)>**
+
+## View war information
+
+To view the info of a specific war: **/war seewarinfo <warID>**
+To open the war stats menu: **/war stats**
+To view the last X wars: **/war lastwars <X>**
+To view the leaders of a current war: **/war leaders**
+To view the leaders (Teams or equivalent) of a current war: **/war teamleaders**
+
+#Others
+
+To change to/from the war scoreboard: **/war scoreboard**
+
+##Seasons
+
+#Season administrative commands
+
+To generate the next X upcoming season on your storage key so you can preemptively edit some of their attributes: **/seasons genupcoming <X> <Default team reward group> <Default player reward group> <Format for the season name (Available modifiers: %seasonnumber% for the season number)>**
+
+If a season is not preemptively generated, it will be generated automatically when the previous season ends, sharing the same attributes as the previous.
+
+To increment the score of a player: **/seasons incrementpscore <player> <Score>**
+To increment the score of a team: **/seasons incrementtscore <team> <score>**
+
+Attempt to end the current season, and consequently assign all of the rewards: **/seasons attemptend**
+
+Change the name of a season: **/season changename <globalid> <new season name>** (To get the season global id, see bellow commands on war info).
+
+Change the team rewards of a season: **/season changereward <globalid> <reward group>** (To get the season global id, see bellow commands on war info).
+
+Change the player rewards of a season: **/season changepreward <globalid> <reward group>**(To get the season global id, see bellow commands on war info).
+
+## Season information
+
+To list the previous X seasons: **/seasons listprevious <X>**
+To list the upcoming X seasons (Only generated seasons will be shown): **/seasons listupcoming <X>**
+
+To see the info of a season with a certain number: **/seasons info <season number>**
+To see the info of a season by its global id: **/seasons infog <globalid>**
+
+To open the season statistics menus: **/seasons stats**
 
 Do **/seasons help** and **/wars help** to view info on creating each. More info to follow...  
 
