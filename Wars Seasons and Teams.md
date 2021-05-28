@@ -40,13 +40,28 @@ To view the last X wars: **/war lastwars <X>**
 To view the leaders of a current war: **/war leaders**
 To view the leaders (Teams or equivalent) of a current war: **/war teamleaders**
 
-#Others
+# Others
 
 To change to/from the war scoreboard: **/war scoreboard**
 
-##Seasons
+## Seasons
 
-#Season administrative commands
+Seasons have a default duration of 10 weeks.
+
+Each team has a given score, incremented by performing certain actions in the game (To configure this to a specific gamemode, talk to one of the devs).
+
+Each player also has a score like the teams.
+
+Players may have 2 different scores, one for the player competitions where they only compete against other singular players and the so called teamless score, which is the score of the player for competing with other teams. When a player joins a team, his teamless score is kept and he will now start contributing points towards his team. He may receive 3 reward sets if both his team score, teamless score and player score are in the placements.
+
+Normally players can also receive 2 reward sets one for the player ladder, another for the team ladder.
+Team rewards are given equally to all members, player rewards are individual to the player.
+
+At the end of the season, these rewards are given out to the placement first teams/teamless and players.
+
+View further down, in rewards how to set the rewards for a given season.
+
+# Season administrative commands
 
 To generate the next X upcoming season on your storage key so you can preemptively edit some of their attributes: **/seasons genupcoming <X> <Default team reward group> <Default player reward group> <Format for the season name (Available modifiers: %seasonnumber% for the season number)>**
 
@@ -108,13 +123,13 @@ Use **/reward update \<reward id> \<new reward type> \<reward arguments>** to up
 
 To set rewards for individual wars, use the following commands:
   
-**/war set-team-reward \<reward group id> <set for all (true/false)>** is used to sets the reward group for team placements.  For the second arg, put true if you want to set the reward for all following wars (if set to false this will only be applied to the current war), and false otherwise.
+**/war setteamreward \<reward group id> <set for all (true/false)>** is used to sets the reward group for team placements.  For the second arg, put true if you want to set the reward for all following wars (if set to false this will only be applied to the current war), and false otherwise.
 
-**/war set-player-reward \<reward group id> <set for all (true/false)>** is used to sets the reward group for player placements. For the second arg, put true if you want to set the reward for all following wars (if set to false this will only be applied to the current war), and false otherwise.
+**/war setplayerrewards \<reward group id> <set for all (true/false)>** is used to sets the reward group for player placements. For the second arg, put true if you want to set the reward for all following wars (if set to false this will only be applied to the current war), and false otherwise.
 
 To set seasonal rewards, use the following commands:
 
-**/season set-team-reward \<season global id> \<reward group id>** is used to sets the reward group for team placements.  
+**/season changereward \<season global id> \<reward group id>** is used to sets the reward group for team placements.  
 
-**/season set-player-reward \<season global id> \<reward group id>** is used to sets the reward group for player placements.
+**/season changepreward \<season global id> \<reward group id>** is used to sets the reward group for player placements.
 
