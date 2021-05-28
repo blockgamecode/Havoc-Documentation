@@ -58,9 +58,9 @@ Use **/reward update \<reward id> \<new reward type> \<reward arguments>** to up
 
 To set rewards for individual wars, use the following commands:
   
-**/war set-team-reward \<reward group id> <set for all (true/false)>** is used to sets the reward group for team placements.  For the second arg, put true if you want to set the reward for all following rewards, and false otherwise.
+**/war set-team-reward \<reward group id> <set for all (true/false)>** is used to sets the reward group for team placements.  For the second arg, put true if you want to set the reward for all following wars (if set to false this will only be applied to the current war), and false otherwise.
 
-**/war set-player-reward \<reward group id> <set for all (true/false)>** is used to sets the reward group for player placements. For the second arg, put true if you want to set the reward for all following rewards, and false otherwise.
+**/war set-player-reward \<reward group id> <set for all (true/false)>** is used to sets the reward group for player placements. For the second arg, put true if you want to set the reward for all following wars (if set to false this will only be applied to the current war), and false otherwise.
 
 To set seasonal rewards, use the following commands:
 
