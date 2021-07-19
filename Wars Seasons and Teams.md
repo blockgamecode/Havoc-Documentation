@@ -30,19 +30,14 @@ To finish creating the location and add it to the list: **/war finish**
 
 ## War administrative commands
 
-To set the next war date: **/war setwardate \<date (Format: 1970-01-01 00:00:00)>**
+To set the next war date: **/war set-date \<war number> \<date (Format: 1970-01-01 00:00:00)>**
 
 ## View war information
 
-To view the info of a specific war: **/war seewarinfo \<warID>**
+To view the info of a specific war: **/war info \<warID>**
 To open the war stats menu: **/war stats**
 To view the last X wars: **/war lastwars \<X>**
 To view the leaders of a current war: **/war leaders**
-To view the leaders (Teams or equivalent) of a current war: **/war teamleaders**
-
-# Others
-
-To change to/from the war scoreboard: **/war scoreboard**
 
 ## Seasons
 
@@ -61,7 +56,7 @@ At the end of the season, these rewards are given out to the placement first tea
 
 View further down, in rewards how to set the rewards for a given season.
 
-# Season administrative commands
+## Season administrative commands
 
 To generate the next X upcoming season on your storage key so you can preemptively edit some of their attributes: **/seasons genupcoming \<X> \<Default team reward group> \<Default player reward group> \<Format for the season name (Available modifiers: %seasonnumber% for the season number)>**
 
